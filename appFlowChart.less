@@ -1,0 +1,108 @@
+[Login Page]
+    |
+    v
+[Dashboard]
+    |
+    +-- [Calendar]
+    |      +-- [Event Manager]
+    |      +-- [Reminder System]
+    |      +-- [Daily View / Monthly View]
+    |
+    +-- [Cinema]
+    |      +-- [Movies Library]
+    |      +-- [Watch Later List]
+    |      +-- [Ratings & Reviews]
+    |      +-- [Offline Video Storage]
+    |
+    +-- [Music Player]
+    |      +-- [Now Playing View]
+    |      +-- [Playlists]
+    |      +-- [Offline Music Storage]
+    |      +-- [Spotify Integration]
+    |
+    +-- [File Manager]
+    |      +-- [Upload/Download Files]
+    |      +-- [Folders Structure]
+    |      +-- [Deleted Items / Trash Bin]
+    |
+    +-- [Password Manager]
+    |      +-- [Save New Passwords]
+    |      +-- [Edit/Delete Passwords]
+    |      +-- [Password Generator]
+    |
+    +-- [Financial Tracker]
+    |      +-- [Asset Manager (Gold, Dollar, Property)]
+    |      +-- [Income/Expense Tracker]
+    |      +-- [Reports & Analytics]
+    |
+    +-- [Mood Tracker]
+    |      +-- [Daily Mood Input]
+    |      +-- [Mood History Analytics]
+    |
+    +-- [Fitness Tracker]
+    |      +-- [Exercise Logs]
+    |      +-- [Health Metrics (Steps, Water Intake)]
+    |
+    +-- [Goal Tracker]
+    |      +-- [Set Goals]
+    |      +-- [Track Progress]
+    |      +-- [Goal Suggestions (AI Powered)]
+    |
+    +-- [Habit Tracker]
+    |      +-- [Daily Habit Checks]
+    |      +-- [Streaks and Reminders]
+    |
+    +-- [Memory Lane]
+    |      +-- [Past Events Recap]
+    |      +-- [Highlights from Past Years]
+    |
+    +-- [Offline Weather]
+    |      +-- [Weather Forecast (Cached)]
+    |      +-- [Dynamic Theme Change]
+    |
+    +-- [Smart Assistant]
+    |      +-- [Chatbot Help]
+    |      +-- [Voice Commands]
+    |      +-- [Summarization / Suggestion Engine]
+    |
+    +-- [Settings]
+           +-- [Theme Customization]
+           +-- [Language Selection]
+           +-- [User Management]
+           +-- [Data Import/Export (JSON)]
+
+
+
+
+//            🧠 Step 2: توضیح ارتباط بین بخش‌ها
+// بخش	وابستگی به
+// Calendar	دیتابیس لوکال برای رویدادها + نوتیفیکیشن
+// Cinema	دیتابیس لوکال برای لیست فیلم‌ها + حافظه فایل برای فیلم‌های دانلودی
+// Music Player	دیتابیس لوکال برای موزیک‌ها + حافظه فایل برای موزیک‌های دانلودی
+// File Manager	سیستم فایل کامپیوتر + دیتابیس لوکال برای متادیتا
+// Password Manager	دیتابیس رمزگذاری شده (CryptoJS)
+// Financial Tracker	دیتابیس لوکال برای اطلاعات مالی + گزارش‌های تحلیلی
+// Mood Tracker	دیتابیس لوکال برای حالات روحی روزانه
+// Fitness Tracker	دیتابیس لوکال برای ثبت ورزش و سلامت
+// Goal Tracker	دیتابیس لوکال برای اهداف + کمک از AI برای پیشنهاد اهداف جدید
+// Habit Tracker	دیتابیس لوکال برای عادت‌های روزانه
+// Memory Lane	دیتابیس لوکال برای وقایع ثبت شده در گذشته
+// Offline Weather	دیتای کش شده از آخرین اتصال اینترنت
+// Smart Assistant	اجرای مدل‌های هوش مصنوعی آفلاین (Summarizer, Suggestion, Voice Commands)
+// Settings	ذخیره تنظیمات کاربر در دیتابیس لوکال
+// 🧠 Step 3: مدل کلی ارتباط دیتا
+// مبدا	مقصد	نوع ارتباط	توضیح
+// کاربر	Calendar	CRUD (Create, Read, Update, Delete)	مدیریت رویدادها و یادآورها
+// کاربر	Cinema	CRUD + File Access	مدیریت فیلم‌ها، مشاهده آفلاین
+// کاربر	Music Player	CRUD + File Access	ساخت پلی‌لیست، پخش آفلاین، اتصال به اسپاتیفای
+// کاربر	File Manager	CRUD + File Handling	مدیریت فایل‌های متفرقه
+// کاربر	Password Manager	CRUD + Encryption	مدیریت پسوردها به صورت امن
+// کاربر	Financial Tracker	CRUD + Charts	مدیریت دارایی‌ها و هزینه‌ها
+// کاربر	Mood Tracker	CRUD + Analytics	ثبت و تحلیل حالات روحی
+// کاربر	Fitness Tracker	CRUD	پیگیری ورزش و سلامت
+// کاربر	Goal Tracker	CRUD + AI Suggestion	تعیین هدف و دریافت پیشنهاد
+// کاربر	Habit Tracker	CRUD	پیگیری عادت‌های مثبت
+// کاربر	Memory Lane	Read + Reminder	مشاهده خاطرات قدیمی
+// کاربر	Offline Weather	Read (Cache)	مشاهده وضعیت آب و هوا
+// کاربر	Smart Assistant	Chat + Commands + Suggestion	استفاده از چت‌بات داخلی و دستورات صوتی
+// کاربر	Settings	CRUD	تغییر تنظیمات زبان، تم، کاربران
